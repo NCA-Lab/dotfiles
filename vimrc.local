@@ -1,0 +1,31 @@
+syntax enable
+syntax on
+filetype on
+
+
+set nocompatible              " be iMproved, required
+set t_Co=256
+set tabstop=4
+set history=1000
+set showmatch
+set showcmd
+set autoindent
+set smartindent
+set incsearch
+
+set mouse=a
+
+" set nu
+" set cursorline    "or set cul 设置光标所在的行
+" set colorcolumn=81
+" set textwidth=80
+" set laststatus=2
+
+let mapleader = "\<Space>"
+
+au BufWinEnter * nohlsearch
+autocmd cursorhold * set nohlsearch
+noremap / :set hlsearch<cr>/
+noremap ? :set hlsearch<cr>?
+noremap * *:set hlsearch<cr>
+nnoremap <leader>n :nohls<CR>
